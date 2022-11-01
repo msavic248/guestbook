@@ -1,8 +1,8 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {signIn, signOut, useSession} from "next-auth/react";
 import {trpc} from "../utils/trpc";
 
-const Form = ({session}) => {
+const Form = ({session}: any) => {
   const [message, setMessage] = useState("");
   const utils = trpc.useContext();
   const postMessage = trpc.guestbook.postMessage.useMutation({
@@ -19,7 +19,7 @@ const Form = ({session}) => {
     },
   });
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     postMessage.mutate({
@@ -57,7 +57,7 @@ const Messages = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      {messages?.map((msg, index) => {
+      {messages?.map((msg: any, index: number) => {
         return (
           <div key={index}>
             <p>{msg.message}</p>
