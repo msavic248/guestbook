@@ -12,7 +12,7 @@ export const guestbookRouter = router({
             await ctx.prisma.guestbook.create({
                 data: {
                     name: input.name,
-                    message: input.message[Symbol],
+                    message: input.message,
                 },
             });
         } catch(error) {
