@@ -14,10 +14,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Example {
+model Guestbook {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  name String
+  message String @db.VarChar(100)
 }
 
 // Necessary for Next auth
