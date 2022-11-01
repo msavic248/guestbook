@@ -2,7 +2,7 @@
 
 This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
 
-## [Guestbook App](guestbook-sigma.vercel.app)
+## [Guestbook App](https://guestbook-sigma.vercel.app)
 
 Users can login with Discord to leave a message on the guestbook. This application was created using these below resources:
 
